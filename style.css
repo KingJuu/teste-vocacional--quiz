@@ -1,0 +1,89 @@
+.sobre-curso{
+    color: #C20114;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5%;
+    border-top: #C20114 solid ;
+    border-bottom: #C20114 solid ;
+    margin: 3rem;
+}
+
+.sobre-curso > h2{
+    margin: 1.5em 0em;
+}
+.btn-saiba-mais{
+    background-color: #C20114;
+    color: #fff;
+    border: 0em;
+    border-radius:0.5em;
+    padding: 10px 50px;
+    font-size: 1.5em;
+    margin: 1em 0em
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5em;
+    padding: 5%;
+}
+
+.defeitos{
+    background-color: #6D7275;
+    padding: 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.defeitos>h2{
+    color: #000;
+}
+.defeitos-titulo{
+    color: #000;
+    width: 100vh;
+    display:flex;
+    justify-content: space-around;
+}
+
+
+.defeito{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 1.5rem
+}
+.defeito>img{
+    width: 10em;
+}
+
+.qualidades{
+    background-color: #C7D6D5;
+    padding: 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.onde-trabalhar{  
+    background-color: #C7D6D5;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px 0px;
+    padding: 5% ;
+}
+
+.trabalhos{
+    display: flex;
+    align-items: center;
+}
+
+.trabalho{
+    text-transform: uppercase;
+    background-color: #6D7275;
+    color: #fff;
+    border: 0em;
+    padding: 1em 2em;
+    margin: 0em 2em;
+}
