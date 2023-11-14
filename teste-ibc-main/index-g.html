@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste IBC - Gato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+</head>
+<body>
+    <div class="section-1">
+        <header id="header-gato">   
+            <img src="./gato.svg" alt="ilustração de lobo">
+            <div class="titulo">
+                <h1>GATO</h1>
+                <h3 id="porcentagem">Seus resultados: n%</h3>
+            </div>
+            
+        </header> 
+        <div class="intro">
+            <h3>INTRODUÇÃO</h3>
+            <p>O Gato tem como característica principal o “fazer junto”. Pessoas com perfil do gato são sensíveis e tem um bom 
+                relacionamento no ambiente empresarial, mantendo a comunicação harmoniosa. Para isso podem esconder conflitos, 
+                colocar a felicidade acima dos resultados e manipular através dos sentimentos.
+                Esses indivíduos têm grande aceitação social e facilidade de construir o consenso, o que provoca o reconhecimento da 
+                equipe e inspira a autoridade no trabalho em equipe.</p>
+        </div>
+    </div>
+    <div class="caracteristicas">
+        <div class="box">
+            <img src="./strenghts-g.svg">
+            <p><h3>PONTOS FORTES: </h3>
+                Trabalhar em equipe, Comunicação aberta
+            </p>
+        </div>
+        <div class="box">
+            <img src="./weakness-g.svg">
+            <p><h3>PONTOS DE MELHORIA: </h3>
+                Esconder conflitos, Manipular através dos sentimentos
+            </p>
+        </div>
+        <div class="box">
+            <img src="./values-g.svg">
+            <p><h3>VALORES: </h3>
+                Felicidade e Igualdade
+            </p>
+        </div>
+    </div>
+    <div class="fim">
+        <button id="retornar-gato" onclick="window.open('./index.html')">VOLTAR</button>
+        <div class="resultados">   
+            <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: n% ></a> 
+            <a href="#">Gato: n% ></a> 
+            <a href="index-t.html">Tubarão: n% ></a> 
+            <a href="index-a.html">Águia: n% ></a> 
+        </div>
+
+    </div>
+    <script>
+        document.querySelector('#porcentagem').innerHTML = `
+        <h3>Seus resultados: ${localStorage.getItem('porcGato')}</h3>
+        ` 
+        document.querySelector('.resultados').innerHTML = ` 
+        <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: ${localStorage.getItem('porcLobo')} ></a> 
+            <a href="index-g.html">Gato: ${localStorage.getItem('porcGato')} ></a> 
+            <a href="index-t.html">Tubarão: ${localStorage.getItem('porcTubarao')} ></a> 
+            <a href="index-a.html">Águia: ${localStorage.getItem('porcAguia')} ></a>
+        `
+    </script>
+</body>
+</html>

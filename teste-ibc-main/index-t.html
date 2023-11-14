@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste IBC - Tubarão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+</head>
+<body>
+    <div class="section-1">
+        <header id="header-tub">   
+            <img src="./tub.svg" alt="ilustração de lobo">
+            <div class="titulo">
+                <h1>TUBARÃO</h1>
+                <h3 id="porcentagem">Seus resultados: n%</h3>
+            </div>
+            
+        </header> 
+        <div class="intro">
+            <h3>INTRODUÇÃO</h3>
+            <p>A característica principal do tubarão é “fazer rápido”. Seu senso de urgência é apurado e por isso prima pela ação e 
+                iniciativa. As pessoas com perfil de tubarão são motivadas à ação, impulsivos e práticos, porém não gostam de delegar 
+                poder.
+                Os indivíduos com esse perfil fazem do modo mais fácil, podem ter problemas de relacionamento e tendem a resolver 
+                seus problemas sozinhos para não ter que repetir tarefas. Gostam de vencer os desafios que lhe são impostos e tem 
+                como foco principal os resultados.</p>
+        </div>
+    </div>
+    <div class="caracteristicas">
+        <div class="box">
+            <img src="./strenghts-t.svg">
+            <p><h3>PONTOS FORTES: </h3>
+                Fazer com que ocorra, Parar com a burocracia
+            </p>
+        </div>
+        <div class="box">
+            <img src="./weakness-t.svg">
+            <p><h3>PONTOS DE MELHORIA: </h3>
+                Relacionamento complicado, Fazer do jeito mais fácil
+            </p>
+        </div>
+        <div class="box">
+            <img src="./values-t.svg">
+            <p><h3>VALORES: </h3>
+                Resultados
+            </p>
+        </div>
+    </div>
+    <div class="fim">
+        <button id="retornar-tub" onclick="window.open('./index.html')">VOLTAR</button></a>
+        <div class="resultados">   
+            <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: n% ></a> 
+            <a href="index-g.html">Gato: n% ></a> 
+            <a href="#">Tubarão: n% ></a> 
+            <a href="index-a.html">Águia: n% ></a> 
+        </div>
+    </div>
+    <script>
+        document.querySelector('#porcentagem').innerHTML = `
+        <h3>Seus resultados: ${localStorage.getItem('porcTubarao')}</h3>
+        ` 
+        document.querySelector('.resultados').innerHTML = ` 
+        <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: ${localStorage.getItem('porcLobo')} ></a> 
+            <a href="index-g.html">Gato: ${localStorage.getItem('porcGato')} ></a> 
+            <a href="index-t.html">Tubarão: ${localStorage.getItem('porcTubarao')} ></a> 
+            <a href="index-a.html">Águia: ${localStorage.getItem('porcAguia')} ></a>
+        `
+    </script>
+</body>
+</html>

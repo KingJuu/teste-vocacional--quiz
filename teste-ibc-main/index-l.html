@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste IBC - Lobo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+</head>
+<body>
+    <div class="section-1">
+        <header id="header-lobo">   
+            <img src="./lobo.svg" alt="ilustração de lobo">
+            <div class="titulo">
+                <h1>LOBO</h1>
+                <h3 id="porcentagem">Seus resultados: n%</h3>
+            </div>
+            
+        </header> 
+        <div class="intro">
+            <h3>INTRODUÇÃO</h3>
+            <p>O Lobo tem como característica principal “fazer certo”. Pessoas com esse perfil são detalhistas e organizadas, não 
+                dando um passo sem pensar na estratégia. São pontuais, responsáveis, metódicos e prezam pela consistência, 
+                conformidade e qualidade. Por isso, tem dificuldades em se adaptar a mudanças e podem impedir o progresso por 
+                pensar demasiadamente nos detalhes.
+                Esses indivíduos têm a certeza e compreensão exata de quais são as regras, buscam o conhecimento específico do 
+                trabalho. Seu objetivo é ver o produto acabado, começo, meio e fim com ausência de riscos e erros.</p>
+        </div>
+    </div>
+    <div class="caracteristicas">
+        <div class="box">
+            <img src="./strenghts (2).svg">
+            <p><h3>PONTOS FORTES: </h3>
+                Pensar em longo prazo, Cumprir com as regras e responsabilidades
+            </p>
+        </div>
+        <div class="box">
+            <img src="./weakness.svg">
+            <p><h3>PONTOS DE MELHORIA: </h3>
+                Dificuldades de se adaptar às mudanças, Pode impedir o progresso
+            </p>
+        </div>
+        <div class="box">
+            <img src="./values.svg">
+            <p><h3>VALORES: </h3>
+                Ordem e Controle
+            </p>
+        </div>
+    </div>
+    <div class="fim">
+        <button id="retornar-lobo" onclick="window.open('./index.html')">VOLTAR</button>
+        <div class="resultados">   
+            <h3>RESULTADO COMPLETO:</h3>
+            <a href="#">Lobo: n% ></a> 
+            <a href="index-g.html">Gato: n% ></a> 
+            <a href="index-t.html">Tubarão: n% ></a> 
+            <a href="index-a.html">Águia: n% ></a> 
+        </div>
+
+    </div>
+    <script>
+        document.querySelector('#porcentagem').innerHTML = `
+        <h3>Seus resultados: ${localStorage.getItem('porcLobo')}</h3>
+        ` 
+        document.querySelector('.resultados').innerHTML = ` 
+        <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: ${localStorage.getItem('porcLobo')} ></a> 
+            <a href="index-g.html">Gato: ${localStorage.getItem('porcGato')} ></a> 
+            <a href="index-t.html">Tubarão: ${localStorage.getItem('porcTubarao')} ></a> 
+            <a href="index-a.html">Águia: ${localStorage.getItem('porcAguia')} ></a>
+        `
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste IBC - Águia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+</head>
+<body>
+    <div class="section-1">
+        <header id="header-aguia">   
+            <img src="./aguia.svg" alt="ilustração de lobo">
+            <div class="titulo">
+                <h1>ÁGUIA</h1>
+                <h3 id="porcentagem">Seus resultados: n%</h3>
+            </div>
+            
+        </header> 
+        <div class="intro">
+            <h3>INTRODUÇÃO</h3>
+            <p>A águia tem como característica principal “fazer diferente”. Pessoas com o perfil de águia são criativas e usam a sua 
+                intuição com frequência para antecipar o futuro, provocar mudanças radicais e inspirar ideias. Essas características 
+                fazem com que ela seja impaciente e rebelde, defendendo sempre o novo pelo novo sem se preocupar com o 
+                presente.
+                Se sente motivado pela ausência de controles rígidos e ambiente de trabalho descentralizado. É informal, flexível e 
+                prima pela liberdade de expressão e para fazer exceções. Está sempre aguardando uma oportunidade para delegar 
+                tarefas e detalhes.</p>
+        </div>
+    </div>
+    <div class="caracteristicas">
+        <div class="box">
+            <img src="./strenghts-a.svg">
+            <p><h3>PONTOS FORTES: </h3>
+                Provocar mudanças radicais, Antecipar o futuro
+            </p>
+        </div>
+        <div class="box">
+            <img src="./weakness-a.svg">
+            <p><h3>PONTOS DE MELHORIA: </h3>
+                Falta de atenção para o presente, Impaciência e rebeldia
+            </p>
+        </div>
+        <div class="box">
+            <img src="./values-a.svg">
+            <p><h3>VALORES: </h3>
+                Criatividade e Liberdade
+            </p>
+        </div>
+    </div>
+    <div class="fim">
+        <button id="retornar-aguia" onclick="window.open('./index.html')">VOLTAR</button>
+        <div class="resultados">   
+            <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: n% ></a> 
+            <a href="index-g.html">Gato: n% ></a> 
+            <a href="index-t.html">Tubarão: n% ></a> 
+            <a href="#">Águia: n% ></a> 
+        </div>
+
+    </div>
+    <script>
+        document.querySelector('#porcentagem').innerHTML = `
+        <h3>Seus resultados: ${localStorage.getItem('porcAguia')}</h3>
+        ` 
+        document.querySelector('.resultados').innerHTML = ` 
+        <h3>RESULTADO COMPLETO:</h3>
+            <a href="index-l.html">Lobo: ${localStorage.getItem('porcLobo')} ></a> 
+            <a href="index-g.html">Gato: ${localStorage.getItem('porcGato')} ></a> 
+            <a href="index-t.html">Tubarão: ${localStorage.getItem('porcTubarao')} ></a> 
+            <a href="index-a.html">Águia: ${localStorage.getItem('porcAguia')} ></a>
+        `
+    </script>
+</body>
+</html>
